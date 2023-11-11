@@ -1,12 +1,19 @@
+import { useState } from 'react'
 
+export const Select = ({colors, colorChange}) => {
+  
+  const handleSelectorOption = (e) => {
+    colorChange(e.target.value)
+  }
 
-export const Select = ({colors}) => {
   return (
     <div className="flex"> 
+      
       <label htmlFor="color" className="p-4">Color</label>
-      <select id="color">
+
+      <select id="color" onChange={handleSelectorOption}>
         {colors.map((item) => (
-          <option key={item}>{item}</option>
+          <option value={item} key={item}>{item}</option>
         ))}
       </select>
 

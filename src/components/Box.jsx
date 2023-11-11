@@ -1,7 +1,6 @@
 import clsx from 'clsx'
 
 export const Box = ({color}) => {
-  console.log(color)
   return (
     <div className={clsx('w-36 h-36 border-teal-900 border',
       {'bg-red-500' : color === 'Red'},
